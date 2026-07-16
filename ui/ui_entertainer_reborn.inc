@@ -25,6 +25,7 @@
 			mode='mode'
 			Name='CodeData'
 			octave='octave'
+			pause='pause'
 			settings='settings'
 			song='song'
 			stop='stop'
@@ -84,6 +85,15 @@
 			TextColor='#B9F5FF'
 		/>
 		<Button
+			LocalText='Pause'
+			Location='278,68'
+			Name='pause'
+			ScrollExtent='84,22'
+			Size='84,22'
+			Style='/Styles.New.buttons.hud.style'
+			Visible='false'
+		>Pause</Button>
+		<Button
 			LocalText='Settings'
 			Location='278,68'
 			Name='settings'
@@ -99,6 +109,64 @@
 			Size='92,22'
 			Style='/Styles.New.buttons.hud.style'
 		>Stop</Button>
+	</Page>
+	<Page
+		BackgroundOpacity='0.92'
+		BackgroundTint='#174E58'
+		Location='302,320'
+		Name='EntertainerRebornScriptPicker'
+		PackLocation='cpc,cpc'
+		PalBgTint='back2'
+		RStyleDefault='/Styles.New.fatFrameInside_palW.rs_default'
+		ScrollExtent='440,210'
+		Size='440,210'
+		Visible='false'
+	>
+		<Data
+			cancel='cancel'
+			Name='CodeData'
+			refresh='refresh'
+			script='script'
+			start='start'
+			status='status'
+		/>
+		<Text
+			Font='bold_14'
+			Location='14,12'
+			Name='title'
+			PreLocalized='true'
+			ScrollExtent='412,22'
+			Size='412,22'
+			TextColor='#D8F8FF'
+		>Start Music from Script</Text>
+		<Text Font='bold_12' Location='14,43' Name='scriptLabel' PreLocalized='true' ScrollExtent='74,20' Size='74,20'>MIDI File</Text>
+		<ComboBox
+			ButtonStyle='/Styles.New.buttons.combo_arrow.style'
+			ButtonWidth='10'
+			DataSource='scriptDs'
+			DropDownHeight='220'
+			ListStyle='/Styles.list.combo.style_all'
+			Location='88,41'
+			Name='script'
+			RStyleDefault='/Styles.New.combo.combo1.rs_default'
+			ScrollbarStyle='/Styles.scrollbar.default.vHud3.style'
+			ScrollExtent='338,22'
+			Size='338,22'
+			TextboxStyle='/Styles.textbox.combo.Style_new'
+		/>
+		<DataSource Name='scriptDs'/>
+		<Text
+			Font='bold_12'
+			Location='14,76'
+			Name='status'
+			PreLocalized='true'
+			ScrollExtent='412,65'
+			Size='412,65'
+			TextColor='#B9F5FF'
+		/>
+		<Button LocalText='Refresh' Location='142,166' Name='refresh' ScrollExtent='88,24' Size='88,24' Style='/Styles.New.buttons.hud.style'>Refresh</Button>
+		<Button LocalText='Start' Location='240,166' Name='start' ScrollExtent='88,24' Size='88,24' Style='/Styles.New.buttons.hud.style'>Start</Button>
+		<Button LocalText='Cancel' Location='338,166' Name='cancel' ScrollExtent='88,24' Size='88,24' Style='/Styles.New.buttons.hud.style'>Cancel</Button>
 	</Page>
 	<Page
 		BackgroundOpacity='0.92'
