@@ -10321,9 +10321,36 @@ parent.snapAngle.enabled=false'
 							keyFlourish7='rows.row7.key'
 							keyFlourish8='rows.row8.key'
 							localPageName='Performance Input'
+							flourishRows='rows'
+							mappingMode='mappingMode'
 							midiDevice='device'
 							midiOctave='octave'
 							midiStatus='status'
+							musicKey1='musicRows.row1.key1'
+							musicKey2='musicRows.row2.key1'
+							musicKey3='musicRows.row3.key1'
+							musicKey4='musicRows.row4.key1'
+							musicKey5='musicRows.row5.key1'
+							musicKey6='musicRows.row6.key1'
+							musicKey7='musicRows.row7.key1'
+							musicKey8='musicRows.row8.key1'
+							musicKey9='musicRows.row1.key2'
+							musicKey10='musicRows.row2.key2'
+							musicKey11='musicRows.row3.key2'
+							musicKey12='musicRows.row4.key2'
+							musicKey13='musicRows.row5.key2'
+							musicKey14='musicRows.row6.key2'
+							musicKey15='musicRows.row7.key2'
+							musicKey16='musicRows.row8.key2'
+							musicKey17='musicRows.row1.key3'
+							musicKey18='musicRows.row2.key3'
+							musicKey19='musicRows.row3.key3'
+							musicKey20='musicRows.row4.key3'
+							musicKey21='musicRows.row5.key3'
+							musicKey22='musicRows.row6.key3'
+							musicKey23='musicRows.row7.key3'
+							musicKey24='musicRows.row8.key3'
+							musicRows='musicRows'
 							Name='CodeData'
 							noteFlourish1='rows.row1.note'
 							noteFlourish2='rows.row2.note'
@@ -10401,6 +10428,23 @@ parent.snapAngle.enabled=false'
 							TextboxStyle='/Styles.textbox.combo.Style_new'
 						/>
 						<DataSource Name='octaveDs'/>
+						<Text Font='bold_12' Location='282,57' Name='mappingLabel' PreLocalized='true' ScrollExtent='84,18' Size='84,18'>Mappings</Text>
+						<ComboBox
+							BackgroundOpacity='0.70'
+							ButtonStyle='/Styles.New.buttons.combo_arrow.style'
+							ButtonWidth='10'
+							DataSource='mappingModeDs'
+							DropDownHeight='80'
+							ListStyle='/Styles.list.combo.style_all'
+							Location='366,55'
+							Name='mappingMode'
+							RStyleDefault='/Styles.New.combo.combo1.rs_default'
+							ScrollbarStyle='/Styles.scrollbar.default.vHud3.style'
+							ScrollExtent='139,19'
+							Size='139,19'
+							TextboxStyle='/Styles.textbox.combo.Style_new'
+						/>
+						<DataSource Name='mappingModeDs'/>
 						<Text Font='bold_12' Location='12,91' Name='actionHeader' PreLocalized='true' ScrollExtent='120,18' Size='120,18'>ACTION</Text>
 						<Text Font='bold_12' Location='168,91' Name='keyHeader' PreLocalized='true' ScrollExtent='135,18' Size='135,18'>KEYBOARD</Text>
 						<Text Font='bold_12' Location='340,91' Name='noteHeader' PreLocalized='true' ScrollExtent='145,18' Size='145,18'>MIDI NOTE</Text>
@@ -10455,6 +10499,60 @@ parent.snapAngle.enabled=false'
 								<Text Font='bold_12' Location='4,8' Name='label' PreLocalized='true' ScrollExtent='140,19' Size='140,19'>Flourish 8</Text>
 								<ComboBox ButtonStyle='/Styles.New.buttons.combo_arrow.style' ButtonWidth='10' DataSource='keyDs' DropDownHeight='220' ListStyle='/Styles.list.combo.style_all' Location='154,7' Name='key' RStyleDefault='/Styles.New.combo.combo1.rs_default' ScrollbarStyle='/Styles.scrollbar.default.vHud3.style' ScrollExtent='150,19' Size='150,19' TextboxStyle='/Styles.textbox.combo.Style_new'/><DataSource Name='keyDs'/>
 								<ComboBox ButtonStyle='/Styles.New.buttons.combo_arrow.style' ButtonWidth='10' DataSource='noteDs' DropDownHeight='220' ListStyle='/Styles.list.combo.style_all' Location='326,7' Name='note' RStyleDefault='/Styles.New.combo.combo1.rs_default' ScrollbarStyle='/Styles.scrollbar.default.vHud3.style' ScrollExtent='155,19' Size='155,19' TextboxStyle='/Styles.textbox.combo.Style_new'/><DataSource Name='noteDs'/>
+							</Page>
+						</Composite>
+						<Composite
+							BackgroundOpacity='0.24'
+							BackgroundTint='#01687E'
+							Location='8,112'
+							Name='musicRows'
+							Padding='Both'
+							RStyleDefault='/Styles.New.whitebox_palW.rs_default'
+							ScrollExtent='497,320'
+							Size='497,320'
+							Spacing='4'
+							SpacingType='Constant'
+							Visible='false'
+						>
+							<Page Name='row1' ScrollExtent='489,35' Size='489,35'>
+								<Text Font='bold_12' Location='4,8' Name='label1' PreLocalized='true' ScrollExtent='32,19' Size='32,19'>C3</Text><ComboBox ButtonStyle='/Styles.New.buttons.combo_arrow.style' ButtonWidth='10' DataSource='keyDs1' DropDownHeight='220' ListStyle='/Styles.list.combo.style_all' Location='38,7' Name='key1' RStyleDefault='/Styles.New.combo.combo1.rs_default' ScrollbarStyle='/Styles.scrollbar.default.vHud3.style' ScrollExtent='108,19' Size='108,19' TextboxStyle='/Styles.textbox.combo.Style_new'/><DataSource Name='keyDs1'/>
+								<Text Font='bold_12' Location='164,8' Name='label2' PreLocalized='true' ScrollExtent='32,19' Size='32,19'>G#3</Text><ComboBox ButtonStyle='/Styles.New.buttons.combo_arrow.style' ButtonWidth='10' DataSource='keyDs2' DropDownHeight='220' ListStyle='/Styles.list.combo.style_all' Location='198,7' Name='key2' RStyleDefault='/Styles.New.combo.combo1.rs_default' ScrollbarStyle='/Styles.scrollbar.default.vHud3.style' ScrollExtent='108,19' Size='108,19' TextboxStyle='/Styles.textbox.combo.Style_new'/><DataSource Name='keyDs2'/>
+								<Text Font='bold_12' Location='324,8' Name='label3' PreLocalized='true' ScrollExtent='32,19' Size='32,19'>E4</Text><ComboBox ButtonStyle='/Styles.New.buttons.combo_arrow.style' ButtonWidth='10' DataSource='keyDs3' DropDownHeight='220' ListStyle='/Styles.list.combo.style_all' Location='358,7' Name='key3' RStyleDefault='/Styles.New.combo.combo1.rs_default' ScrollbarStyle='/Styles.scrollbar.default.vHud3.style' ScrollExtent='123,19' Size='123,19' TextboxStyle='/Styles.textbox.combo.Style_new'/><DataSource Name='keyDs3'/>
+							</Page>
+							<Page Name='row2' ScrollExtent='489,35' Size='489,35'>
+								<Text Font='bold_12' Location='4,8' Name='label1' PreLocalized='true' ScrollExtent='32,19' Size='32,19'>C#3</Text><ComboBox ButtonStyle='/Styles.New.buttons.combo_arrow.style' ButtonWidth='10' DataSource='keyDs1' DropDownHeight='220' ListStyle='/Styles.list.combo.style_all' Location='38,7' Name='key1' RStyleDefault='/Styles.New.combo.combo1.rs_default' ScrollbarStyle='/Styles.scrollbar.default.vHud3.style' ScrollExtent='108,19' Size='108,19' TextboxStyle='/Styles.textbox.combo.Style_new'/><DataSource Name='keyDs1'/>
+								<Text Font='bold_12' Location='164,8' Name='label2' PreLocalized='true' ScrollExtent='32,19' Size='32,19'>A3</Text><ComboBox ButtonStyle='/Styles.New.buttons.combo_arrow.style' ButtonWidth='10' DataSource='keyDs2' DropDownHeight='220' ListStyle='/Styles.list.combo.style_all' Location='198,7' Name='key2' RStyleDefault='/Styles.New.combo.combo1.rs_default' ScrollbarStyle='/Styles.scrollbar.default.vHud3.style' ScrollExtent='108,19' Size='108,19' TextboxStyle='/Styles.textbox.combo.Style_new'/><DataSource Name='keyDs2'/>
+								<Text Font='bold_12' Location='324,8' Name='label3' PreLocalized='true' ScrollExtent='32,19' Size='32,19'>F4</Text><ComboBox ButtonStyle='/Styles.New.buttons.combo_arrow.style' ButtonWidth='10' DataSource='keyDs3' DropDownHeight='220' ListStyle='/Styles.list.combo.style_all' Location='358,7' Name='key3' RStyleDefault='/Styles.New.combo.combo1.rs_default' ScrollbarStyle='/Styles.scrollbar.default.vHud3.style' ScrollExtent='123,19' Size='123,19' TextboxStyle='/Styles.textbox.combo.Style_new'/><DataSource Name='keyDs3'/>
+							</Page>
+							<Page Name='row3' ScrollExtent='489,35' Size='489,35'>
+								<Text Font='bold_12' Location='4,8' Name='label1' PreLocalized='true' ScrollExtent='32,19' Size='32,19'>D3</Text><ComboBox ButtonStyle='/Styles.New.buttons.combo_arrow.style' ButtonWidth='10' DataSource='keyDs1' DropDownHeight='220' ListStyle='/Styles.list.combo.style_all' Location='38,7' Name='key1' RStyleDefault='/Styles.New.combo.combo1.rs_default' ScrollbarStyle='/Styles.scrollbar.default.vHud3.style' ScrollExtent='108,19' Size='108,19' TextboxStyle='/Styles.textbox.combo.Style_new'/><DataSource Name='keyDs1'/>
+								<Text Font='bold_12' Location='164,8' Name='label2' PreLocalized='true' ScrollExtent='32,19' Size='32,19'>A#3</Text><ComboBox ButtonStyle='/Styles.New.buttons.combo_arrow.style' ButtonWidth='10' DataSource='keyDs2' DropDownHeight='220' ListStyle='/Styles.list.combo.style_all' Location='198,7' Name='key2' RStyleDefault='/Styles.New.combo.combo1.rs_default' ScrollbarStyle='/Styles.scrollbar.default.vHud3.style' ScrollExtent='108,19' Size='108,19' TextboxStyle='/Styles.textbox.combo.Style_new'/><DataSource Name='keyDs2'/>
+								<Text Font='bold_12' Location='324,8' Name='label3' PreLocalized='true' ScrollExtent='32,19' Size='32,19'>F#4</Text><ComboBox ButtonStyle='/Styles.New.buttons.combo_arrow.style' ButtonWidth='10' DataSource='keyDs3' DropDownHeight='220' ListStyle='/Styles.list.combo.style_all' Location='358,7' Name='key3' RStyleDefault='/Styles.New.combo.combo1.rs_default' ScrollbarStyle='/Styles.scrollbar.default.vHud3.style' ScrollExtent='123,19' Size='123,19' TextboxStyle='/Styles.textbox.combo.Style_new'/><DataSource Name='keyDs3'/>
+							</Page>
+							<Page Name='row4' ScrollExtent='489,35' Size='489,35'>
+								<Text Font='bold_12' Location='4,8' Name='label1' PreLocalized='true' ScrollExtent='32,19' Size='32,19'>D#3</Text><ComboBox ButtonStyle='/Styles.New.buttons.combo_arrow.style' ButtonWidth='10' DataSource='keyDs1' DropDownHeight='220' ListStyle='/Styles.list.combo.style_all' Location='38,7' Name='key1' RStyleDefault='/Styles.New.combo.combo1.rs_default' ScrollbarStyle='/Styles.scrollbar.default.vHud3.style' ScrollExtent='108,19' Size='108,19' TextboxStyle='/Styles.textbox.combo.Style_new'/><DataSource Name='keyDs1'/>
+								<Text Font='bold_12' Location='164,8' Name='label2' PreLocalized='true' ScrollExtent='32,19' Size='32,19'>B3</Text><ComboBox ButtonStyle='/Styles.New.buttons.combo_arrow.style' ButtonWidth='10' DataSource='keyDs2' DropDownHeight='220' ListStyle='/Styles.list.combo.style_all' Location='198,7' Name='key2' RStyleDefault='/Styles.New.combo.combo1.rs_default' ScrollbarStyle='/Styles.scrollbar.default.vHud3.style' ScrollExtent='108,19' Size='108,19' TextboxStyle='/Styles.textbox.combo.Style_new'/><DataSource Name='keyDs2'/>
+								<Text Font='bold_12' Location='324,8' Name='label3' PreLocalized='true' ScrollExtent='32,19' Size='32,19'>G4</Text><ComboBox ButtonStyle='/Styles.New.buttons.combo_arrow.style' ButtonWidth='10' DataSource='keyDs3' DropDownHeight='220' ListStyle='/Styles.list.combo.style_all' Location='358,7' Name='key3' RStyleDefault='/Styles.New.combo.combo1.rs_default' ScrollbarStyle='/Styles.scrollbar.default.vHud3.style' ScrollExtent='123,19' Size='123,19' TextboxStyle='/Styles.textbox.combo.Style_new'/><DataSource Name='keyDs3'/>
+							</Page>
+							<Page Name='row5' ScrollExtent='489,35' Size='489,35'>
+								<Text Font='bold_12' Location='4,8' Name='label1' PreLocalized='true' ScrollExtent='32,19' Size='32,19'>E3</Text><ComboBox ButtonStyle='/Styles.New.buttons.combo_arrow.style' ButtonWidth='10' DataSource='keyDs1' DropDownHeight='220' ListStyle='/Styles.list.combo.style_all' Location='38,7' Name='key1' RStyleDefault='/Styles.New.combo.combo1.rs_default' ScrollbarStyle='/Styles.scrollbar.default.vHud3.style' ScrollExtent='108,19' Size='108,19' TextboxStyle='/Styles.textbox.combo.Style_new'/><DataSource Name='keyDs1'/>
+								<Text Font='bold_12' Location='164,8' Name='label2' PreLocalized='true' ScrollExtent='32,19' Size='32,19'>C4</Text><ComboBox ButtonStyle='/Styles.New.buttons.combo_arrow.style' ButtonWidth='10' DataSource='keyDs2' DropDownHeight='220' ListStyle='/Styles.list.combo.style_all' Location='198,7' Name='key2' RStyleDefault='/Styles.New.combo.combo1.rs_default' ScrollbarStyle='/Styles.scrollbar.default.vHud3.style' ScrollExtent='108,19' Size='108,19' TextboxStyle='/Styles.textbox.combo.Style_new'/><DataSource Name='keyDs2'/>
+								<Text Font='bold_12' Location='324,8' Name='label3' PreLocalized='true' ScrollExtent='32,19' Size='32,19'>G#4</Text><ComboBox ButtonStyle='/Styles.New.buttons.combo_arrow.style' ButtonWidth='10' DataSource='keyDs3' DropDownHeight='220' ListStyle='/Styles.list.combo.style_all' Location='358,7' Name='key3' RStyleDefault='/Styles.New.combo.combo1.rs_default' ScrollbarStyle='/Styles.scrollbar.default.vHud3.style' ScrollExtent='123,19' Size='123,19' TextboxStyle='/Styles.textbox.combo.Style_new'/><DataSource Name='keyDs3'/>
+							</Page>
+							<Page Name='row6' ScrollExtent='489,35' Size='489,35'>
+								<Text Font='bold_12' Location='4,8' Name='label1' PreLocalized='true' ScrollExtent='32,19' Size='32,19'>F3</Text><ComboBox ButtonStyle='/Styles.New.buttons.combo_arrow.style' ButtonWidth='10' DataSource='keyDs1' DropDownHeight='220' ListStyle='/Styles.list.combo.style_all' Location='38,7' Name='key1' RStyleDefault='/Styles.New.combo.combo1.rs_default' ScrollbarStyle='/Styles.scrollbar.default.vHud3.style' ScrollExtent='108,19' Size='108,19' TextboxStyle='/Styles.textbox.combo.Style_new'/><DataSource Name='keyDs1'/>
+								<Text Font='bold_12' Location='164,8' Name='label2' PreLocalized='true' ScrollExtent='32,19' Size='32,19'>C#4</Text><ComboBox ButtonStyle='/Styles.New.buttons.combo_arrow.style' ButtonWidth='10' DataSource='keyDs2' DropDownHeight='220' ListStyle='/Styles.list.combo.style_all' Location='198,7' Name='key2' RStyleDefault='/Styles.New.combo.combo1.rs_default' ScrollbarStyle='/Styles.scrollbar.default.vHud3.style' ScrollExtent='108,19' Size='108,19' TextboxStyle='/Styles.textbox.combo.Style_new'/><DataSource Name='keyDs2'/>
+								<Text Font='bold_12' Location='324,8' Name='label3' PreLocalized='true' ScrollExtent='32,19' Size='32,19'>A4</Text><ComboBox ButtonStyle='/Styles.New.buttons.combo_arrow.style' ButtonWidth='10' DataSource='keyDs3' DropDownHeight='220' ListStyle='/Styles.list.combo.style_all' Location='358,7' Name='key3' RStyleDefault='/Styles.New.combo.combo1.rs_default' ScrollbarStyle='/Styles.scrollbar.default.vHud3.style' ScrollExtent='123,19' Size='123,19' TextboxStyle='/Styles.textbox.combo.Style_new'/><DataSource Name='keyDs3'/>
+							</Page>
+							<Page Name='row7' ScrollExtent='489,35' Size='489,35'>
+								<Text Font='bold_12' Location='4,8' Name='label1' PreLocalized='true' ScrollExtent='32,19' Size='32,19'>F#3</Text><ComboBox ButtonStyle='/Styles.New.buttons.combo_arrow.style' ButtonWidth='10' DataSource='keyDs1' DropDownHeight='220' ListStyle='/Styles.list.combo.style_all' Location='38,7' Name='key1' RStyleDefault='/Styles.New.combo.combo1.rs_default' ScrollbarStyle='/Styles.scrollbar.default.vHud3.style' ScrollExtent='108,19' Size='108,19' TextboxStyle='/Styles.textbox.combo.Style_new'/><DataSource Name='keyDs1'/>
+								<Text Font='bold_12' Location='164,8' Name='label2' PreLocalized='true' ScrollExtent='32,19' Size='32,19'>D4</Text><ComboBox ButtonStyle='/Styles.New.buttons.combo_arrow.style' ButtonWidth='10' DataSource='keyDs2' DropDownHeight='220' ListStyle='/Styles.list.combo.style_all' Location='198,7' Name='key2' RStyleDefault='/Styles.New.combo.combo1.rs_default' ScrollbarStyle='/Styles.scrollbar.default.vHud3.style' ScrollExtent='108,19' Size='108,19' TextboxStyle='/Styles.textbox.combo.Style_new'/><DataSource Name='keyDs2'/>
+								<Text Font='bold_12' Location='324,8' Name='label3' PreLocalized='true' ScrollExtent='32,19' Size='32,19'>A#4</Text><ComboBox ButtonStyle='/Styles.New.buttons.combo_arrow.style' ButtonWidth='10' DataSource='keyDs3' DropDownHeight='220' ListStyle='/Styles.list.combo.style_all' Location='358,7' Name='key3' RStyleDefault='/Styles.New.combo.combo1.rs_default' ScrollbarStyle='/Styles.scrollbar.default.vHud3.style' ScrollExtent='123,19' Size='123,19' TextboxStyle='/Styles.textbox.combo.Style_new'/><DataSource Name='keyDs3'/>
+							</Page>
+							<Page Name='row8' ScrollExtent='489,35' Size='489,35'>
+								<Text Font='bold_12' Location='4,8' Name='label1' PreLocalized='true' ScrollExtent='32,19' Size='32,19'>G3</Text><ComboBox ButtonStyle='/Styles.New.buttons.combo_arrow.style' ButtonWidth='10' DataSource='keyDs1' DropDownHeight='220' ListStyle='/Styles.list.combo.style_all' Location='38,7' Name='key1' RStyleDefault='/Styles.New.combo.combo1.rs_default' ScrollbarStyle='/Styles.scrollbar.default.vHud3.style' ScrollExtent='108,19' Size='108,19' TextboxStyle='/Styles.textbox.combo.Style_new'/><DataSource Name='keyDs1'/>
+								<Text Font='bold_12' Location='164,8' Name='label2' PreLocalized='true' ScrollExtent='32,19' Size='32,19'>D#4</Text><ComboBox ButtonStyle='/Styles.New.buttons.combo_arrow.style' ButtonWidth='10' DataSource='keyDs2' DropDownHeight='220' ListStyle='/Styles.list.combo.style_all' Location='198,7' Name='key2' RStyleDefault='/Styles.New.combo.combo1.rs_default' ScrollbarStyle='/Styles.scrollbar.default.vHud3.style' ScrollExtent='108,19' Size='108,19' TextboxStyle='/Styles.textbox.combo.Style_new'/><DataSource Name='keyDs2'/>
+								<Text Font='bold_12' Location='324,8' Name='label3' PreLocalized='true' ScrollExtent='32,19' Size='32,19'>B4</Text><ComboBox ButtonStyle='/Styles.New.buttons.combo_arrow.style' ButtonWidth='10' DataSource='keyDs3' DropDownHeight='220' ListStyle='/Styles.list.combo.style_all' Location='358,7' Name='key3' RStyleDefault='/Styles.New.combo.combo1.rs_default' ScrollbarStyle='/Styles.scrollbar.default.vHud3.style' ScrollExtent='123,19' Size='123,19' TextboxStyle='/Styles.textbox.combo.Style_new'/><DataSource Name='keyDs3'/>
 							</Page>
 						</Composite>
 						<Text
