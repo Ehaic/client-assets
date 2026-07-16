@@ -33,6 +33,7 @@
 				pageGraphics='comp.target.graphics'
 				pageKeymap='comp.target.keymap'
 				pageMisc='comp.target.misc'
+				pagePerformance='comp.target.performance'
 				pageSound='comp.target.sound'
 				pageTerrain='comp.target.terrain'
 				pageUI='comp.target.ui'
@@ -185,6 +186,12 @@
 						Name='@ui_opt:b_keymap'
 						Size='128,64'
 						Target='target.keymap'
+					/>
+					<Data
+						localName='Performance'
+						Name='Performance'
+						Size='128,64'
+						Target='target.performance'
 					/>
 				</DataSource>
 				<Composite
@@ -560,6 +567,33 @@ activated=true'
 						Style='/Styles.New.buttons.hud.style'
 						Tooltip='@ui_opt:tooltip_controls_keymap'
 					>@ui_opt:b_keymap</Button>
+					<Button
+						LocalText='Performance'
+						Location='4,367'
+						MaximumSize='16384,22'
+						MinimumSize='0,19'
+						Name='buttonPerformance'
+						OnEnable='activated=false'
+						OnPress='parent.parent.tabs.activetab=12
+parent.buttonGraphics.enabled=true
+parent.buttonTerrain.enabled=true
+parent.buttonSound.enabled=true
+parent.buttonCombat.enabled=true
+parent.buttonChat.enabled=true
+parent.buttonChatColors.enabled=true
+parent.buttonAlarm.enabled=true
+parent.buttonAFK.enabled=true
+parent.buttonUI.enabled=true
+parent.buttonControls.enabled=true
+parent.buttonMisc.enabled=true
+parent.buttonKeymap.enabled=true
+activated=true'
+						PackSize='a'
+						RStyleDefault='rs_default'
+						ScrollExtent='103,22'
+						Size='103,22'
+						Style='/Styles.New.buttons.hud.style'
+					>Performance</Button>
 				</Composite>
 				<Page
 					BackgroundTint='#1CFFFF'
@@ -10265,6 +10299,181 @@ parent.snapAngle.enabled=false'
 								Size='512,533'
 							/>
 						</Page>
+					</Page>
+					<Page
+						Enabled='false'
+						Name='performance'
+						PackLocation='nfn,nfn'
+						PackSize='a,a'
+						RStyleDefault='rs_default'
+						ScrollExtent='513,555'
+						Size='513,555'
+						Visible='false'
+					>
+						<Data
+							buttonDefaults='buttonDefaults'
+							keyFlourish1='rows.row1.key'
+							keyFlourish2='rows.row2.key'
+							keyFlourish3='rows.row3.key'
+							keyFlourish4='rows.row4.key'
+							keyFlourish5='rows.row5.key'
+							keyFlourish6='rows.row6.key'
+							keyFlourish7='rows.row7.key'
+							keyFlourish8='rows.row8.key'
+							localPageName='Performance Input'
+							midiDevice='device'
+							midiOctave='octave'
+							midiStatus='status'
+							Name='CodeData'
+							noteFlourish1='rows.row1.note'
+							noteFlourish2='rows.row2.note'
+							noteFlourish3='rows.row3.note'
+							noteFlourish4='rows.row4.note'
+							noteFlourish5='rows.row5.note'
+							noteFlourish6='rows.row6.note'
+							noteFlourish7='rows.row7.note'
+							noteFlourish8='rows.row8.note'
+							PageName='Performance Input'
+							refreshMidi='refresh'
+						/>
+						<Text
+							Font='bold_14'
+							Location='8,2'
+							Name='title'
+							PreLocalized='true'
+							ScrollExtent='497,20'
+							Size='497,20'
+							TextColor='#D8F8FF'
+						>PERFORMANCE INPUT</Text>
+						<Text
+							Font='bold_12'
+							Location='8,28'
+							Name='deviceLabel'
+							PreLocalized='true'
+							ScrollExtent='110,18'
+							Size='110,18'
+						>MIDI Device</Text>
+						<ComboBox
+							BackgroundOpacity='0.70'
+							ButtonStyle='/Styles.New.buttons.combo_arrow.style'
+							ButtonWidth='10'
+							DataSource='deviceDs'
+							DropDownHeight='220'
+							ListStyle='/Styles.list.combo.style_all'
+							Location='118,26'
+							Name='device'
+							RStyleDefault='/Styles.New.combo.combo1.rs_default'
+							ScrollbarStyle='/Styles.scrollbar.default.vHud3.style'
+							ScrollExtent='292,19'
+							Size='292,19'
+							TextboxStyle='/Styles.textbox.combo.Style_new'
+						/>
+						<DataSource Name='deviceDs'/>
+						<Button
+							LocalText='Refresh'
+							Location='418,26'
+							Name='refresh'
+							ScrollExtent='87,19'
+							Size='87,19'
+							Style='/Styles.New.buttons.hud.style'
+						>Refresh</Button>
+						<Text
+							Font='bold_12'
+							Location='8,57'
+							Name='octaveLabel'
+							PreLocalized='true'
+							ScrollExtent='110,18'
+							Size='110,18'
+						>MIDI Octave</Text>
+						<ComboBox
+							BackgroundOpacity='0.70'
+							ButtonStyle='/Styles.New.buttons.combo_arrow.style'
+							ButtonWidth='10'
+							DataSource='octaveDs'
+							DropDownHeight='180'
+							ListStyle='/Styles.list.combo.style_all'
+							Location='118,55'
+							Name='octave'
+							RStyleDefault='/Styles.New.combo.combo1.rs_default'
+							ScrollbarStyle='/Styles.scrollbar.default.vHud3.style'
+							ScrollExtent='150,19'
+							Size='150,19'
+							TextboxStyle='/Styles.textbox.combo.Style_new'
+						/>
+						<DataSource Name='octaveDs'/>
+						<Text Font='bold_12' Location='12,91' Name='actionHeader' PreLocalized='true' ScrollExtent='120,18' Size='120,18'>ACTION</Text>
+						<Text Font='bold_12' Location='168,91' Name='keyHeader' PreLocalized='true' ScrollExtent='135,18' Size='135,18'>KEYBOARD</Text>
+						<Text Font='bold_12' Location='340,91' Name='noteHeader' PreLocalized='true' ScrollExtent='145,18' Size='145,18'>MIDI NOTE</Text>
+						<Composite
+							BackgroundOpacity='0.24'
+							BackgroundTint='#01687E'
+							Location='8,112'
+							Name='rows'
+							Padding='Both'
+							RStyleDefault='/Styles.New.whitebox_palW.rs_default'
+							ScrollExtent='497,320'
+							Size='497,320'
+							Spacing='4'
+							SpacingType='Constant'
+						>
+							<Page Name='row1' ScrollExtent='489,35' Size='489,35'>
+								<Text Font='bold_12' Location='4,8' Name='label' PreLocalized='true' ScrollExtent='140,19' Size='140,19'>Flourish 1</Text>
+								<ComboBox ButtonStyle='/Styles.New.buttons.combo_arrow.style' ButtonWidth='10' DataSource='keyDs' DropDownHeight='220' ListStyle='/Styles.list.combo.style_all' Location='154,7' Name='key' RStyleDefault='/Styles.New.combo.combo1.rs_default' ScrollbarStyle='/Styles.scrollbar.default.vHud3.style' ScrollExtent='150,19' Size='150,19' TextboxStyle='/Styles.textbox.combo.Style_new'/><DataSource Name='keyDs'/>
+								<ComboBox ButtonStyle='/Styles.New.buttons.combo_arrow.style' ButtonWidth='10' DataSource='noteDs' DropDownHeight='220' ListStyle='/Styles.list.combo.style_all' Location='326,7' Name='note' RStyleDefault='/Styles.New.combo.combo1.rs_default' ScrollbarStyle='/Styles.scrollbar.default.vHud3.style' ScrollExtent='155,19' Size='155,19' TextboxStyle='/Styles.textbox.combo.Style_new'/><DataSource Name='noteDs'/>
+							</Page>
+							<Page Name='row2' ScrollExtent='489,35' Size='489,35'>
+								<Text Font='bold_12' Location='4,8' Name='label' PreLocalized='true' ScrollExtent='140,19' Size='140,19'>Flourish 2</Text>
+								<ComboBox ButtonStyle='/Styles.New.buttons.combo_arrow.style' ButtonWidth='10' DataSource='keyDs' DropDownHeight='220' ListStyle='/Styles.list.combo.style_all' Location='154,7' Name='key' RStyleDefault='/Styles.New.combo.combo1.rs_default' ScrollbarStyle='/Styles.scrollbar.default.vHud3.style' ScrollExtent='150,19' Size='150,19' TextboxStyle='/Styles.textbox.combo.Style_new'/><DataSource Name='keyDs'/>
+								<ComboBox ButtonStyle='/Styles.New.buttons.combo_arrow.style' ButtonWidth='10' DataSource='noteDs' DropDownHeight='220' ListStyle='/Styles.list.combo.style_all' Location='326,7' Name='note' RStyleDefault='/Styles.New.combo.combo1.rs_default' ScrollbarStyle='/Styles.scrollbar.default.vHud3.style' ScrollExtent='155,19' Size='155,19' TextboxStyle='/Styles.textbox.combo.Style_new'/><DataSource Name='noteDs'/>
+							</Page>
+							<Page Name='row3' ScrollExtent='489,35' Size='489,35'>
+								<Text Font='bold_12' Location='4,8' Name='label' PreLocalized='true' ScrollExtent='140,19' Size='140,19'>Flourish 3</Text>
+								<ComboBox ButtonStyle='/Styles.New.buttons.combo_arrow.style' ButtonWidth='10' DataSource='keyDs' DropDownHeight='220' ListStyle='/Styles.list.combo.style_all' Location='154,7' Name='key' RStyleDefault='/Styles.New.combo.combo1.rs_default' ScrollbarStyle='/Styles.scrollbar.default.vHud3.style' ScrollExtent='150,19' Size='150,19' TextboxStyle='/Styles.textbox.combo.Style_new'/><DataSource Name='keyDs'/>
+								<ComboBox ButtonStyle='/Styles.New.buttons.combo_arrow.style' ButtonWidth='10' DataSource='noteDs' DropDownHeight='220' ListStyle='/Styles.list.combo.style_all' Location='326,7' Name='note' RStyleDefault='/Styles.New.combo.combo1.rs_default' ScrollbarStyle='/Styles.scrollbar.default.vHud3.style' ScrollExtent='155,19' Size='155,19' TextboxStyle='/Styles.textbox.combo.Style_new'/><DataSource Name='noteDs'/>
+							</Page>
+							<Page Name='row4' ScrollExtent='489,35' Size='489,35'>
+								<Text Font='bold_12' Location='4,8' Name='label' PreLocalized='true' ScrollExtent='140,19' Size='140,19'>Flourish 4</Text>
+								<ComboBox ButtonStyle='/Styles.New.buttons.combo_arrow.style' ButtonWidth='10' DataSource='keyDs' DropDownHeight='220' ListStyle='/Styles.list.combo.style_all' Location='154,7' Name='key' RStyleDefault='/Styles.New.combo.combo1.rs_default' ScrollbarStyle='/Styles.scrollbar.default.vHud3.style' ScrollExtent='150,19' Size='150,19' TextboxStyle='/Styles.textbox.combo.Style_new'/><DataSource Name='keyDs'/>
+								<ComboBox ButtonStyle='/Styles.New.buttons.combo_arrow.style' ButtonWidth='10' DataSource='noteDs' DropDownHeight='220' ListStyle='/Styles.list.combo.style_all' Location='326,7' Name='note' RStyleDefault='/Styles.New.combo.combo1.rs_default' ScrollbarStyle='/Styles.scrollbar.default.vHud3.style' ScrollExtent='155,19' Size='155,19' TextboxStyle='/Styles.textbox.combo.Style_new'/><DataSource Name='noteDs'/>
+							</Page>
+							<Page Name='row5' ScrollExtent='489,35' Size='489,35'>
+								<Text Font='bold_12' Location='4,8' Name='label' PreLocalized='true' ScrollExtent='140,19' Size='140,19'>Flourish 5</Text>
+								<ComboBox ButtonStyle='/Styles.New.buttons.combo_arrow.style' ButtonWidth='10' DataSource='keyDs' DropDownHeight='220' ListStyle='/Styles.list.combo.style_all' Location='154,7' Name='key' RStyleDefault='/Styles.New.combo.combo1.rs_default' ScrollbarStyle='/Styles.scrollbar.default.vHud3.style' ScrollExtent='150,19' Size='150,19' TextboxStyle='/Styles.textbox.combo.Style_new'/><DataSource Name='keyDs'/>
+								<ComboBox ButtonStyle='/Styles.New.buttons.combo_arrow.style' ButtonWidth='10' DataSource='noteDs' DropDownHeight='220' ListStyle='/Styles.list.combo.style_all' Location='326,7' Name='note' RStyleDefault='/Styles.New.combo.combo1.rs_default' ScrollbarStyle='/Styles.scrollbar.default.vHud3.style' ScrollExtent='155,19' Size='155,19' TextboxStyle='/Styles.textbox.combo.Style_new'/><DataSource Name='noteDs'/>
+							</Page>
+							<Page Name='row6' ScrollExtent='489,35' Size='489,35'>
+								<Text Font='bold_12' Location='4,8' Name='label' PreLocalized='true' ScrollExtent='140,19' Size='140,19'>Flourish 6</Text>
+								<ComboBox ButtonStyle='/Styles.New.buttons.combo_arrow.style' ButtonWidth='10' DataSource='keyDs' DropDownHeight='220' ListStyle='/Styles.list.combo.style_all' Location='154,7' Name='key' RStyleDefault='/Styles.New.combo.combo1.rs_default' ScrollbarStyle='/Styles.scrollbar.default.vHud3.style' ScrollExtent='150,19' Size='150,19' TextboxStyle='/Styles.textbox.combo.Style_new'/><DataSource Name='keyDs'/>
+								<ComboBox ButtonStyle='/Styles.New.buttons.combo_arrow.style' ButtonWidth='10' DataSource='noteDs' DropDownHeight='220' ListStyle='/Styles.list.combo.style_all' Location='326,7' Name='note' RStyleDefault='/Styles.New.combo.combo1.rs_default' ScrollbarStyle='/Styles.scrollbar.default.vHud3.style' ScrollExtent='155,19' Size='155,19' TextboxStyle='/Styles.textbox.combo.Style_new'/><DataSource Name='noteDs'/>
+							</Page>
+							<Page Name='row7' ScrollExtent='489,35' Size='489,35'>
+								<Text Font='bold_12' Location='4,8' Name='label' PreLocalized='true' ScrollExtent='140,19' Size='140,19'>Flourish 7</Text>
+								<ComboBox ButtonStyle='/Styles.New.buttons.combo_arrow.style' ButtonWidth='10' DataSource='keyDs' DropDownHeight='220' ListStyle='/Styles.list.combo.style_all' Location='154,7' Name='key' RStyleDefault='/Styles.New.combo.combo1.rs_default' ScrollbarStyle='/Styles.scrollbar.default.vHud3.style' ScrollExtent='150,19' Size='150,19' TextboxStyle='/Styles.textbox.combo.Style_new'/><DataSource Name='keyDs'/>
+								<ComboBox ButtonStyle='/Styles.New.buttons.combo_arrow.style' ButtonWidth='10' DataSource='noteDs' DropDownHeight='220' ListStyle='/Styles.list.combo.style_all' Location='326,7' Name='note' RStyleDefault='/Styles.New.combo.combo1.rs_default' ScrollbarStyle='/Styles.scrollbar.default.vHud3.style' ScrollExtent='155,19' Size='155,19' TextboxStyle='/Styles.textbox.combo.Style_new'/><DataSource Name='noteDs'/>
+							</Page>
+							<Page Name='row8' ScrollExtent='489,35' Size='489,35'>
+								<Text Font='bold_12' Location='4,8' Name='label' PreLocalized='true' ScrollExtent='140,19' Size='140,19'>Flourish 8</Text>
+								<ComboBox ButtonStyle='/Styles.New.buttons.combo_arrow.style' ButtonWidth='10' DataSource='keyDs' DropDownHeight='220' ListStyle='/Styles.list.combo.style_all' Location='154,7' Name='key' RStyleDefault='/Styles.New.combo.combo1.rs_default' ScrollbarStyle='/Styles.scrollbar.default.vHud3.style' ScrollExtent='150,19' Size='150,19' TextboxStyle='/Styles.textbox.combo.Style_new'/><DataSource Name='keyDs'/>
+								<ComboBox ButtonStyle='/Styles.New.buttons.combo_arrow.style' ButtonWidth='10' DataSource='noteDs' DropDownHeight='220' ListStyle='/Styles.list.combo.style_all' Location='326,7' Name='note' RStyleDefault='/Styles.New.combo.combo1.rs_default' ScrollbarStyle='/Styles.scrollbar.default.vHud3.style' ScrollExtent='155,19' Size='155,19' TextboxStyle='/Styles.textbox.combo.Style_new'/><DataSource Name='noteDs'/>
+							</Page>
+						</Composite>
+						<Text
+							Font='bold_12'
+							Location='8,447'
+							Name='status'
+							PreLocalized='true'
+							ScrollExtent='497,42'
+							Size='497,42'
+							TextColor='#B9F5FF'
+						/>
+						<Button
+							LocalText='Reset Performance Defaults'
+							Location='306,526'
+							Name='buttonDefaults'
+							ScrollExtent='199,19'
+							Size='199,19'
+							Style='/Styles.New.buttons.hud.style'
+						>Reset Performance Defaults</Button>
 					</Page>
 					<include>ui_options_keymap.inc</include>
 				</Page>

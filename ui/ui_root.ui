@@ -46,6 +46,7 @@
 	<include>ui_space.inc</include>
 	<include>ui_hud_space.inc</include>
 	<include>ui_ground_hud.inc</include>
+	<include>ui_entertainer_reborn.inc</include>
 	<include>ui_transition.inc</include>
 	<include>ui_loginscreen.inc</include>
 	<include>ui_cluster_selection.inc</include>
