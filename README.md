@@ -15,3 +15,7 @@ That's it!
 Double-click on UpdateSwgClient.bat again to get updates.
 
 Add a shortcut to it on your desktop or start menu or whatever to make updates super easy!
+
+## Galaxies Reborn community
+
+Join the [Galaxies Reborn Discord](https://discord.gg/CEwKVvKxK5) for project discussion, support, and announcements.
