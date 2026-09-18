@@ -241,7 +241,7 @@ activated=true'
 						Size='103,22'
 						Style='/Styles.New.buttons.hud.style'
 					>@ui_opt:b_graphics</Button>
-<Button
+					<Button
 						LocalText='Adv. Graphics'
 						Location='4,3'
 						MaximumSize='16384,22'
@@ -8587,7 +8587,8 @@ parent.combohours.enabled=true
 							Location='8,532'
 							MinimumSize='0,19'
 							Name='ButtonKeyMaps'
-							OnPress='parent.parent.parent.tabs.activetab=12
+							OnPress='parent.parent.parent.tabs.activetab=11
+parent.parent.parent.buttonTabs.buttonAdvancedGraphics.enabled=true
 parent.parent.parent.buttonTabs.buttonGraphics.enabled=true
 parent.parent.parent.buttonTabs.buttonCamera.enabled=true
 parent.parent.parent.buttonTabs.buttonTerrain.enabled=true
