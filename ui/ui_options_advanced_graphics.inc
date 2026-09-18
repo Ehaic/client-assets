@@ -1,5 +1,7 @@
 <Page BackgroundColor='#FFFFFF' BackgroundTint='#203E42' BackgroundOpacity='1.00' OpacityRelativeMin='0.90' PalBgTint='back1' RStyleDefault='/Styles.New.whiteOutline_palW.rs_default' Name='advancedGraphics' PackSize='a,a' Size='513,555' ScrollExtent='513,555' Visible='false'>
-<Data Name='CodeData' PageName='@ui_opt:page_graphics' resolution='resolution' mode='mode' vsync='vsync' apply='apply' keep='keep' revert='revert' status='status' />
+<Data Name='CodeData' PageName='@ui_opt:page_graphics' resolution='content.resolution' mode='content.mode' vsync='content.vsync' apply='content.apply' keep='content.keep' revert='content.revert' status='content.status' />
+<!-- Match the Graphics page: an outline frame plus a separate filled whitebox panel. -->
+<Page Name='content' Location='3,3' Size='507,549' ScrollExtent='507,549' PackSize='a,a' RStyleDefault='/Styles.New.whitebox.rs_default' BackgroundOpacity='1.00'>
 <Text Name='title' Font='bold_12' Location='14,12' Size='480,24' PackSize='a,f' TextColor='#97FFFF' LocalText='Advanced Graphics'>Advanced Graphics</Text>
 <Text Name='intro' Font='bold_12' Location='14,44' Size='480,42' PackSize='a,f' LocalText='Change display settings without leaving the game.'>Change display settings without leaving the game.</Text>
 <Text Name='modeLabel' TextColor='#97FFFF' Font='bold_12' Location='14,100' Size='480,20' LocalText='Display mode'>Display mode</Text>
@@ -16,4 +18,5 @@
 <Button BackgroundOpacity='1.00' OpacityRelativeMin='1.00' Name='keep' LocalText='Keep settings' Location='174,360' Size='150,24' Style='/Styles.New.buttons.hud.style'>Keep settings</Button>
 <Button BackgroundOpacity='1.00' OpacityRelativeMin='1.00' Name='revert' LocalText='Revert' Location='334,360' Size='150,24' Style='/Styles.New.buttons.hud.style'>Revert</Button>
 <Text Name='status' Font='bold_12' Location='14,406' Size='480,105' PackSize='a,f' LocalText='' />
+</Page>
 </Page>
