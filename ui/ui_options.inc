@@ -31,6 +31,7 @@
 				pageCombat='comp.target.combat'
 				pageControls='comp.target.controls'
 				pageGraphics='comp.target.graphics'
+                pageAdvancedGraphics='comp.target.advancedGraphics'
 				pageKeymap='comp.target.keymap'
 				pageMisc='comp.target.misc'
 				pageSound='comp.target.sound'
@@ -186,7 +187,8 @@
 						Size='128,64'
 						Target='target.keymap'
 					/>
-				</DataSource>
+				<Data Name='Advanced Graphics' localName='Advanced Graphics' Target='target.advancedGraphics' />
+                </DataSource>
 				<Composite
 					BackgroundOpacity='0.30'
 					BackgroundTint='#00D6FB'
@@ -217,6 +219,7 @@
 						Name='buttonGraphics'
 						OnEnable='activated=false'
 						OnPress='parent.parent.tabs.activetab=0
+parent.buttonAdvancedGraphics.enabled=true
 parent.buttonGraphics.enabled=true
 parent.buttonCamera.enabled=true
 parent.buttonTerrain.enabled=true
@@ -238,6 +241,36 @@ activated=true'
 						Size='103,22'
 						Style='/Styles.New.buttons.hud.style'
 					>@ui_opt:b_graphics</Button>
+<Button
+						LocalText='Adv. Graphics'
+						Location='4,3'
+						MaximumSize='16384,22'
+						MinimumSize='0,19'
+						Name='buttonAdvancedGraphics'
+						OnEnable='activated=false'
+						OnPress='parent.parent.tabs.activetab=12
+parent.buttonAdvancedGraphics.enabled=true
+parent.buttonGraphics.enabled=true
+parent.buttonCamera.enabled=true
+parent.buttonTerrain.enabled=true
+parent.buttonSound.enabled=true
+parent.buttonCombat.enabled=true
+parent.buttonChat.enabled=true
+parent.buttonChatColors.enabled=true
+parent.buttonAlarm.enabled=true
+parent.buttonAFK.enabled=true
+parent.buttonUI.enabled=true
+parent.buttonControls.enabled=true
+parent.buttonMisc.enabled=true
+parent.buttonKeymap.enabled=true
+enabled=false
+activated=true'
+						PackSize='a'
+						RStyleDefault='rs_default'
+						ScrollExtent='103,22'
+						Size='103,22'
+						Style='/Styles.New.buttons.hud.style'
+					>Adv. Graphics</Button>
 					<Button
 						LocalText='[@ui_opt:b_terrain]'
 						Location='4,31'
@@ -246,6 +279,7 @@ activated=true'
 						Name='buttonTerrain'
 						OnEnable='activated=false'
 						OnPress='parent.parent.tabs.activetab=1
+parent.buttonAdvancedGraphics.enabled=true
 parent.buttonGraphics.enabled=true
 parent.buttonCamera.enabled=true
 parent.buttonTerrain.enabled=true
@@ -275,6 +309,7 @@ activated=true'
 						Name='buttonSound'
 						OnEnable='activated=false'
 						OnPress='parent.parent.tabs.activetab=2
+parent.buttonAdvancedGraphics.enabled=true
 parent.buttonGraphics.enabled=true
 parent.buttonCamera.enabled=true
 parent.buttonTerrain.enabled=true
@@ -304,6 +339,7 @@ activated=true'
 						Name='buttonCombat'
 						OnEnable='activated=false'
 						OnPress='parent.parent.tabs.activetab=3
+parent.buttonAdvancedGraphics.enabled=true
 parent.buttonGraphics.enabled=true
 parent.buttonCamera.enabled=true
 parent.buttonTerrain.enabled=true
@@ -333,6 +369,7 @@ activated=true'
 						Name='buttonChat'
 						OnEnable='activated=false'
 						OnPress='parent.parent.tabs.activetab=4
+parent.buttonAdvancedGraphics.enabled=true
 parent.buttonGraphics.enabled=true
 parent.buttonCamera.enabled=true
 parent.buttonTerrain.enabled=true
@@ -362,6 +399,7 @@ activated=true'
 						Name='buttonChatColors'
 						OnEnable='activated=false'
 						OnPress='parent.parent.tabs.activetab=5
+parent.buttonAdvancedGraphics.enabled=true
 parent.buttonGraphics.enabled=true
 parent.buttonCamera.enabled=true
 parent.buttonTerrain.enabled=true
@@ -391,6 +429,7 @@ activated=true'
 						Name='buttonAlarm'
 						OnEnable='activated=false'
 						OnPress='parent.parent.tabs.activetab=6
+parent.buttonAdvancedGraphics.enabled=true
 parent.buttonGraphics.enabled=true
 parent.buttonCamera.enabled=true
 parent.buttonTerrain.enabled=true
@@ -420,6 +459,7 @@ activated=true'
 						Name='buttonAFK'
 						OnEnable='activated=false'
 						OnPress='parent.parent.tabs.activetab=7
+parent.buttonAdvancedGraphics.enabled=true
 parent.buttonGraphics.enabled=true
 parent.buttonCamera.enabled=true
 parent.buttonTerrain.enabled=true
@@ -450,6 +490,7 @@ activated=true'
 						Name='buttonUI'
 						OnEnable='activated=false'
 						OnPress='parent.parent.tabs.activetab=8
+parent.buttonAdvancedGraphics.enabled=true
 parent.buttonGraphics.enabled=true
 parent.buttonCamera.enabled=true
 parent.buttonTerrain.enabled=true
@@ -479,6 +520,7 @@ activated=true'
 						Name='buttonControls'
 						OnEnable='activated=false'
 						OnPress='parent.parent.tabs.activetab=9
+parent.buttonAdvancedGraphics.enabled=true
 parent.buttonGraphics.enabled=true
 parent.buttonCamera.enabled=true
 parent.buttonTerrain.enabled=true
@@ -508,6 +550,7 @@ activated=true'
 						Name='buttonMisc'
 						OnEnable='activated=false'
 						OnPress='parent.parent.tabs.activetab=10
+parent.buttonAdvancedGraphics.enabled=true
 parent.buttonGraphics.enabled=true
 parent.buttonCamera.enabled=true
 parent.buttonTerrain.enabled=true
@@ -538,6 +581,7 @@ activated=true'
 						Name='buttonKeymap'
 						OnEnable='activated=false'
 						OnPress='parent.parent.tabs.activetab=11
+parent.buttonAdvancedGraphics.enabled=true
 parent.buttonGraphics.enabled=true
 parent.buttonCamera.enabled=true
 parent.buttonTerrain.enabled=true
@@ -10267,6 +10311,7 @@ parent.snapAngle.enabled=false'
 						</Page>
 					</Page>
 					<include>ui_options_keymap.inc</include>
+                    <include>ui_options_advanced_graphics.inc</include>
 				</Page>
 			</Composite>
 			<Page
